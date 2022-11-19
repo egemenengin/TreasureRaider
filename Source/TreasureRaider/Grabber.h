@@ -35,4 +35,7 @@ private:
 	float GrabRadius = 25;
 	UPROPERTY(EditAnyWhere)
 	float HoldDistance = 200;	
+
+	UPROPERTY(EditAnyWhere)
+	FName GrabbedTag = "Grabbed";
 };

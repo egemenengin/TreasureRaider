@@ -3,18 +3,19 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "Mover.generated.h"
+#include "Components/BoxComponent.h"
+#include "Mover.h"
+#include "TriggerSecretDoorComponent.generated.h"
 
-
+/**
+ * 
+ */
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TREASURERAIDER_API UMover : public UActorComponent
+class TREASURERAIDER_API UTriggerSecretDoorComponent : public UBoxComponent
 {
 	GENERATED_BODY()
-
-public:	
-	// Sets default values for this component's properties
-	UMover();
+public:
+	UTriggerSecretDoorComponent();
 
 protected:
 	// Called when the game starts
@@ -23,20 +24,19 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	AActor* GetKeyActor() const;
 
+	UFUNCTION(BlueprintCallable)
+	void SetMover(UMover* Mover);
+	
 private:
 	UPROPERTY(EditAnyWhere)
-	FVector MoveOffset;
-
-	UPROPERTY()
-	FVector StartingLocation;
-
+	FName KeyTag;
 	UPROPERTY(EditAnyWhere)
-	float MoveTime = 4;
+	FName GrabbedTag;
 	
-	UPROPERTY(EditAnyWhere)
-	bool ShouldMove = false;
+	UMover* Mover;
+	
 
-public: 
-	void SetShouldMove(bool NewShouldMove);
+
 };

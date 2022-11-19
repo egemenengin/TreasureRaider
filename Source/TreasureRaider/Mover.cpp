@@ -33,10 +33,13 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	float Speed = FVector::Distance(StartingLocation, TargetLocation) / MoveTime;
 	if(ShouldMove)
 	{
-		UE_LOG(LogTemp, Display, TEXT("START"));
 		GetOwner()->SetActorLocation(FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed));
-		UE_LOG(LogTemp, Display, TEXT("FINISH"));
 	}
+	else
+	{
+		GetOwner()->SetActorLocation(FMath::VInterpConstantTo(CurrentLocation, StartingLocation, DeltaTime, Speed));
+	}
+
 	/*
 	AActor* Owner = GetOwner();
 	FString Name = Owner->GetActorNameOrLabel();
@@ -48,4 +51,7 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	UE_LOG(LogTemp, Display, TEXT("COORDINATES: %s\n"), *OwnerLocationString);
 	*/
 }
-
+void UMover::SetShouldMove(bool NewShouldMove)
+{
+	ShouldMove = NewShouldMove;
+}
