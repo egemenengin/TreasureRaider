@@ -1,5 +1,15 @@
 [
 	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\GameplayHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\GameplayHUD.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\Grabber.cpp",
 		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
@@ -10,12 +20,52 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\LoseHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\LoseHUD.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\MainMenuHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\MainMenuHUD.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\Mover.cpp",
 		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\Mover.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\PauseHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\PauseHUD.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\SettingsHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\SettingsHUD.h",
 		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
@@ -91,6 +141,16 @@
 	},
 	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\TriggerSecretDoorComponent.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\WinHUD.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\Source\\TreasureRaider\\WinHUD.h",
 		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\TreasureRaider\\.vscode\\compileCommands_Default\\TreasureRaider.211.rsp",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	}
