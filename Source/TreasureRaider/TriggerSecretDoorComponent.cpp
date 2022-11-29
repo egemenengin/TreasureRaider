@@ -1,8 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "TriggerSecretDoorComponent.h"
 #include "GameFramework/Actor.h"
 #include "Components/PrimitiveComponent.h"
-#include "TriggerSecretDoorComponent.h"
+
 
 UTriggerSecretDoorComponent::UTriggerSecretDoorComponent()
 {

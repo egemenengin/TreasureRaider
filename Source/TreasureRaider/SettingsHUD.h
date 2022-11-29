@@ -14,4 +14,16 @@ class TREASURERAIDER_API USettingsHUD : public UUserWidget
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual bool Initialize() override;
+
+public:
+	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
+	class USlider* MusicSlider;
+
+	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
+	class USlider* SoundSlider;
+
+	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
+	class UButton* SaveAndBackButton;
 };
