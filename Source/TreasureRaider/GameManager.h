@@ -11,6 +11,7 @@
 #include "PauseHUD.h"
 #include "LoseHUD.h"
 #include "WinHUD.h"
+#include "LevelEnd.h"
 #include "GameManager.generated.h"
 
 UENUM(BlueprintType)
@@ -46,7 +47,7 @@ private:
 	float RemainingTime = 120;
 
 	UPROPERTY(EditAnyWhere)
-	bool GameFinished;
+	bool GameFinished = false;
 
 	TEnumAsByte<EGameStatus> CurGameStatus;
 
@@ -55,6 +56,8 @@ private:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	APlayerController* PlayerControllerRef;
 
+	UPROPERTY(EditAnyWhere)
+	class ULevelEnd* LevelEnd;
 // UI PROPERTIES
 	UPROPERTY(EditAnyWhere)
 	TSubclassOf<class UGameplayHUD> GameplayHUDClass;
@@ -88,5 +91,8 @@ public:
 
 	UFUNCTION()
 	void TimeManager();
+
+	UFUNCTION(BlueprintCallable)
+	void SetLevelEnd(ULevelEnd* CurLevelEnd);
 
 };

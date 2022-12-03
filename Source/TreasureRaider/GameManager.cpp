@@ -44,12 +44,14 @@ void AGameManager::BeginPlay()
 	}
 	PlayerControllerRef->SetShowMouseCursor(false);
 	GameplayHUD->HandleDecreaseTime(TotalTime, RemainingTime);
+	
 }
 
 // Called every frame
 void AGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	if(!GameFinished)
 	{
 		switch(CurGameStatus)
@@ -69,7 +71,6 @@ void AGameManager::Tick(float DeltaTime)
 					PauseHUD->OnResumeClicked();
 				}
 				//else nothing to do
-				
 				break;
 			case EGameStatus::Win:
 				WinGame();
@@ -78,7 +79,11 @@ void AGameManager::Tick(float DeltaTime)
 				LoseGame();
 				break;
 			case EGameStatus::Play:
-				if(PlayerControllerRef->WasInputKeyJustPressed(EKeys::P))
+				if(LevelEnd->GetIsFinished())
+				{
+					SetGameStatus(EGameStatus::Win);
+				}
+				else if(PlayerControllerRef->WasInputKeyJustPressed(EKeys::P))
 				{
 					SetGameStatus(EGameStatus::Pause);
 					PauseHUD->SetGameIsPaused(true);
@@ -148,4 +153,7 @@ void AGameManager::TimeManager()
 	TimerStarted = false;
 }
 
-
+void AGameManager::SetLevelEnd(ULevelEnd* CurLevelEnd)
+{
+	LevelEnd = CurLevelEnd;
+}

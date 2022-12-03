@@ -16,7 +16,9 @@ bool ULoseHUD::Initialize()
     if(!ensure(MainMenuButton != nullptr) ) return false;
     if(!ensure(QuitButton != nullptr) ) return false;
 
-    
+    PlayAgainButton->OnClicked.AddDynamic(this, &ULoseHUD::OnPlayAgainClicked);
+    MainMenuButton->OnClicked.AddDynamic(this, &ULoseHUD::OnMainMenuClicked);
+    QuitButton->OnClicked.AddDynamic(this, &ULoseHUD::OnQuitClicked);
     return bSuccess;
 }
 

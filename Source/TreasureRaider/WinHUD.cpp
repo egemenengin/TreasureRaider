@@ -15,7 +15,8 @@ bool UWinHUD::Initialize()
     if(!ensure(MainMenuButton != nullptr) ) return false;
     if(!ensure(QuitButton != nullptr) ) return false;
 
-
+    MainMenuButton->OnClicked.AddDynamic(this, &UWinHUD::OnMainMenuClicked);
+    QuitButton->OnClicked.AddDynamic(this, &UWinHUD::OnQuitClicked);
     return bSuccess;
 }
 
