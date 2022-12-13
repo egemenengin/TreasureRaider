@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: Grabber.h 
+// UE Version: 5.0 
+// Date: 08/2022
+//----------------------------------------------------------
 
 #pragma once
 
@@ -23,12 +29,19 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	UFUNCTION(BlueprintCallable)
-	void DisableGrab();
+	
+	// User Defined Functions [
+	
+	//	If there is a hit as a result of SweepSingleByChannel, it grabs HitResultActor
 	UFUNCTION(BlueprintCallable)
 	void EnableGrab();
+	// If there is a grabbed actor, release it and delete GrabbedTag.
+	UFUNCTION(BlueprintCallable)
+	void DisableGrab();
+
+	// ]
 private:
+	// Grab Properties [
 	UPROPERTY(EditAnyWhere)
 	float MaxGrabDistance = 220.0;
 	UPROPERTY(EditAnyWhere)
@@ -38,4 +51,5 @@ private:
 
 	UPROPERTY(EditAnyWhere)
 	FName GrabbedTag = "Grabbed";
+	// ]
 };

@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: GameManager.h
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #pragma once
 
@@ -39,26 +45,34 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 private:
+
+	// Time PROPERTIES [
 	UPROPERTY(EditAnyWhere)
 	bool TimerStarted;
+
 	UPROPERTY(EditAnyWhere)
 	float TotalTime = 120;
+
 	UPROPERTY(EditAnyWhere)
 	float RemainingTime = 120;
 
 	UPROPERTY(EditAnyWhere)
 	bool GameFinished = false;
 
-	TEnumAsByte<EGameStatus> CurGameStatus;
-
 	FTimerHandle TimerHandle;
+	// ]
+
+	// Gameplay Handlers [
+	TEnumAsByte<EGameStatus> CurGameStatus;
 
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	APlayerController* PlayerControllerRef;
 
 	UPROPERTY(EditAnyWhere)
 	class ULevelEnd* LevelEnd;
-// UI PROPERTIES
+	// ]
+
+	// UI Properties [
 	UPROPERTY(EditAnyWhere)
 	TSubclassOf<class UGameplayHUD> GameplayHUDClass;
 	class UGameplayHUD* GameplayHUD;
@@ -74,25 +88,32 @@ private:
 	UPROPERTY(EditAnyWhere)
 	TSubclassOf<class ULoseHUD> LoseHUDClass;
 	class ULoseHUD* LoseHUD;
-
+	// ]
 public:
-
+	// User Defined Functions [
+		
+	//Call SetGameStatus to set Current Game Status to Win and Display WinHUD
 	UFUNCTION()
 	void WinGame();
 
+	//Call SetGameStatus to set Current Game Status to Lose and Display LoseHUD
 	UFUNCTION()
 	void LoseGame();
 
+	// Call SetGameStatus to set Current Game Status to Pause and Display PauseHUD
 	UFUNCTION()
 	void PauseGame();
 
+	// CurGameStatus Set Function 
 	UFUNCTION()
 	void SetGameStatus(EGameStatus NewGameStatus);
 
+	// Call HandleDecreaseTime by GameplayHUD and Decrease RemainingTime
 	UFUNCTION()
 	void TimeManager();
 
+	// LevelEnd Set Function 
 	UFUNCTION(BlueprintCallable)
 	void SetLevelEnd(ULevelEnd* CurLevelEnd);
-
+	// ]
 };

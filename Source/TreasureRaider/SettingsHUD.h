@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: SettingsHUD.h
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #pragma once
 
@@ -18,6 +24,7 @@ protected:
 	virtual bool Initialize() override;
 
 public:
+	// UI Properties [
 	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
 	class USlider* MusicSlider;
 
@@ -26,4 +33,5 @@ public:
 
 	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
 	class UButton* SaveAndBackButton;
+	// ]
 };

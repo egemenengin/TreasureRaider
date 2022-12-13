@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: TriggerSecretDoorComponent.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #include "TriggerSecretDoorComponent.h"
 #include "GameFramework/Actor.h"
@@ -30,8 +36,7 @@ void UTriggerSecretDoorComponent::TickComponent(float DeltaTime, ELevelTick Tick
 
     AActor* Actor = GetKeyActor();
     if(Actor == nullptr)
-    {
-       
+    {  
         Mover->SetShouldMove(false);
     }
     else
@@ -46,6 +51,8 @@ void UTriggerSecretDoorComponent::TickComponent(float DeltaTime, ELevelTick Tick
     }
     
 }
+
+// Return Overlapped Actor
 AActor* UTriggerSecretDoorComponent::GetKeyActor() const
 {
     TArray<AActor*> Actors;
@@ -60,6 +67,7 @@ AActor* UTriggerSecretDoorComponent::GetKeyActor() const
     return nullptr;
 }
 
+// Mover Set Function
 void UTriggerSecretDoorComponent::SetMover(UMover* NewMover)
 {
     Mover = NewMover;

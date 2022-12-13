@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: LoseHUD.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "LoseHUD.h"
@@ -22,6 +28,7 @@ bool ULoseHUD::Initialize()
     return bSuccess;
 }
 
+// Load Gameplay Map Again
 void ULoseHUD::OnPlayAgainClicked()
 {
     if(PlayerControllerRef != nullptr)
@@ -31,6 +38,7 @@ void ULoseHUD::OnPlayAgainClicked()
     UGameplayStatics::OpenLevel(GetWorld(), "FirstLevelMap");
 }
 
+// Load MainMenu Map
 void ULoseHUD::OnMainMenuClicked()
 {
     if(PlayerControllerRef != nullptr)
@@ -40,6 +48,7 @@ void ULoseHUD::OnMainMenuClicked()
     UGameplayStatics::OpenLevel(GetWorld(), "MainMenu");
 }
 
+// Quit Game
 void ULoseHUD::OnQuitClicked()
 {
     if(PlayerControllerRef != nullptr)

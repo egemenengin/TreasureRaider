@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: Mover.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "Mover.h"
@@ -33,10 +39,12 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	float Speed = FVector::Distance(StartingLocation, TargetLocation) / MoveTime;
 	if(ShouldMove)
 	{
+		//Towards Target
 		GetOwner()->SetActorLocation(FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed));
 	}
 	else
 	{
+		//Towards Start Position
 		GetOwner()->SetActorLocation(FMath::VInterpConstantTo(CurrentLocation, StartingLocation, DeltaTime, Speed));
 	}
 
@@ -51,6 +59,8 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	UE_LOG(LogTemp, Display, TEXT("COORDINATES: %s\n"), *OwnerLocationString);
 	*/
 }
+
+// ShouldMove Set Function
 void UMover::SetShouldMove(bool NewShouldMove)
 {
 	ShouldMove = NewShouldMove;

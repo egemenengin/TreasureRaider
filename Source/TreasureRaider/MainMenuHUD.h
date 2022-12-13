@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: MainMenuHUD.h 
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #pragma once
 
@@ -17,6 +23,7 @@ protected:
 	virtual bool Initialize() override;
 
 public:
+	// UI Properties [
 	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
 	class UButton* StartButton;
 
@@ -34,20 +41,29 @@ public:
 
 	UPROPERTY(EditAnyWhere, meta = (BindWidget) )
 	class UButton* CloseButton;
+	// ]
 
+	// Gameplay Handler Properties [
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class APlayerController* PlayerControllerRef;
-
+	// ]
+	
+	// User Defined Functions [
+		
+	// Load Gameplay Map
 	UFUNCTION()
 	void OnStartClicked();
+	// Load Settings Map
 	UFUNCTION()
 	void OnSettingsClicked();
+	// Quit Game
 	UFUNCTION()
 	void OnQuitClicked();
-
+	// Display Info HUD
 	UFUNCTION()
 	void OnInfoClicked();
+	// Hide Info HUD
 	UFUNCTION()
 	void OnCloseClicked();
-	
+	// ]
 };

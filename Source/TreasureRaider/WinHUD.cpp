@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: WinHUD.cpp
+// UE Version: 5.0 
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "WinHUD.h"
@@ -20,6 +26,7 @@ bool UWinHUD::Initialize()
     return bSuccess;
 }
 
+// Load MainMenu Map
 void UWinHUD::OnMainMenuClicked()
 {
     if(PlayerControllerRef != nullptr)
@@ -29,6 +36,7 @@ void UWinHUD::OnMainMenuClicked()
     UGameplayStatics::OpenLevel(GetWorld(), "MainMenu");
 }
 
+// Quit Game
 void UWinHUD::OnQuitClicked()
 {
     UKismetSystemLibrary::QuitGame(this, PlayerControllerRef, EQuitPreference::Quit, false);

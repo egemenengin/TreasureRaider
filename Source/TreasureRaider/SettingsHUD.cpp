@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: SettingsHUD.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "SettingsHUD.h"

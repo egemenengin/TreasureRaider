@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: LevelEnd.cpp
+// UE Version: 5.0 
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "LevelEnd.h"
@@ -12,12 +18,14 @@ ULevelEnd::ULevelEnd()
 
 }
 
+// Called when the game starts
 void ULevelEnd::BeginPlay()
 {
     Super::BeginPlay();
 
 }
 
+// Called every frame
 void ULevelEnd::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -28,6 +36,8 @@ void ULevelEnd::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
         IsFinished = true;
     }
 }
+
+//Treasure Actor Get Function
 AActor* ULevelEnd::GetTreasureActor() const
 {
     TArray<AActor*> Actors;
@@ -42,6 +52,8 @@ AActor* ULevelEnd::GetTreasureActor() const
     }
     return nullptr;
 }
+
+// IsFinished Get Function
 bool ULevelEnd::GetIsFinished()
 {
     return IsFinished;

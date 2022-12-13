@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: GameplayHUD.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #include "GameManager.h"
 #include "GameplayHUD.h"
@@ -17,6 +23,7 @@ bool UGameplayHUD::Initialize()
 
 }
 
+// Set Min and Sec Time Texts and Set Percent of Time Progress Bar
 void UGameplayHUD::HandleDecreaseTime(float TotalTime, float RemainingTime)
 {
     int remainingMin = RemainingTime / 60;

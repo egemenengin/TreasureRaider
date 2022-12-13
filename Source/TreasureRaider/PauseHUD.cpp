@@ -1,5 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: PauseHUD.cpp 
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #include "PauseHUD.h"
 #include "Runtime/UMG/Public/UMG.h"
@@ -23,19 +28,21 @@ bool UPauseHUD::Initialize()
     return bSuccess;
 }
 
+// Hide PauseHUD and resume playing
 void UPauseHUD::OnResumeClicked()
 {
-    this->SetVisibility(ESlateVisibility::Hidden);
-    this->SetIsEnabled(false);
-    
     if(PlayerControllerRef != nullptr)
     {
         PlayerControllerRef->SetShowMouseCursor(false);
         UWidgetBlueprintLibrary::SetInputMode_GameOnly(PlayerControllerRef);
     }
-    
+
+    SetGameIsPaused(false);
+    this->SetVisibility(ESlateVisibility::Hidden);
+    this->SetIsEnabled(false);
 }
 
+// Load MainMenu Map
 void UPauseHUD::OnMainMenuClicked()
 {
     this->SetVisibility(ESlateVisibility::Hidden);
@@ -43,20 +50,23 @@ void UPauseHUD::OnMainMenuClicked()
     UGameplayStatics::OpenLevel(GetWorld(), "MainMenu");
 }
 
+// Set MinutesText and SecondsText
 void UPauseHUD::SetRemainingTime(float RemainingTime)
 {
     int RemainingMin = RemainingTime / 60;
     int RemainingSec = (int) RemainingTime % 60;
-    SetGameIsPaused(false);
+
     MinutesText->SetText(FText::AsNumber(RemainingMin));
     SecondsText->SetText(FText::AsNumber(RemainingSec));
 }
 
+// GameIsPaused Set Function
 void UPauseHUD::SetGameIsPaused(bool inp)
 {
     GameIsPaused = inp;
 }
 
+// GameIsPaused Get Function
 bool UPauseHUD::GetGameIsPaused()
 {
     return GameIsPaused;

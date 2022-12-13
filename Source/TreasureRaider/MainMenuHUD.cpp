@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: MainMenuHUD.cpp
+// UE Version: 5.0 
+// Date: 08/2022
+//----------------------------------------------------------
 
 
 #include "MainMenuHUD.h"
@@ -32,6 +38,8 @@ bool UMainMenuHUD::Initialize()
 
     return bSuccess;
 }
+
+// Load Gameplay Map
 void UMainMenuHUD::OnStartClicked()
 {
     if(PlayerControllerRef != nullptr)
@@ -41,11 +49,13 @@ void UMainMenuHUD::OnStartClicked()
     UGameplayStatics::OpenLevel(GetWorld(), "FirstLevelMap");
 }
 
+// Load Settings Map
 void UMainMenuHUD::OnSettingsClicked()
 {
     //UGameplayStatics::OpenLevel(GetWorld(), "");
 }
 
+// Quit Game
 void UMainMenuHUD::OnQuitClicked()
 {
     if(PlayerControllerRef != nullptr)
@@ -54,12 +64,14 @@ void UMainMenuHUD::OnQuitClicked()
     }
 }
 
+// Display Info HUD
 void UMainMenuHUD::OnInfoClicked()
 {
     InfoPanel->SetVisibility(ESlateVisibility::Visible);
     InfoPanel->SetIsEnabled(true);
 }
 
+// Hide Info HUD
 void UMainMenuHUD::OnCloseClicked()
 {
     InfoPanel->SetVisibility(ESlateVisibility::Hidden);

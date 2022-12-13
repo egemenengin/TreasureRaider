@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: Mover.h 
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #pragma once
 
@@ -25,6 +31,7 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
+	// Move Properties [
 	UPROPERTY(EditAnyWhere)
 	FVector MoveOffset;
 
@@ -36,7 +43,11 @@ private:
 	
 	UPROPERTY(EditAnyWhere)
 	bool ShouldMove = false;
-
+	// ]
 public: 
+	// User Defined Functions [	
+		
+	// ShouldMove Set Function
 	void SetShouldMove(bool NewShouldMove);
+	// ]
 };

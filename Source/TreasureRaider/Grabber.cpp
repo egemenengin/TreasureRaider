@@ -1,5 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: Grabber.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #include "Grabber.h"
 
@@ -45,7 +50,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	
 }
 
-//TAKE ITEM
+//	If there is a hit as a result of SweepSingleByChannel, it grabs HitResultActor and adds GrabbedTag
 void UGrabber::EnableGrab()
 {
 	UPhysicsHandleComponent* PhysicHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
@@ -89,7 +94,7 @@ void UGrabber::EnableGrab()
 	}
 }
 
-//RELEASE ITEM
+// If there is a grabbed actor, release it and delete GrabbedTag.
 void UGrabber::DisableGrab()
 {
 	

@@ -1,5 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+//----------------------------------------------------------
+// Author: Egemen Engin
+// https://github.com/egemenengin
+// Name: GameManager.cpp
+// UE Version: 5.0
+// Date: 08/2022
+//----------------------------------------------------------
 
 #include "GameManager.h"
 
@@ -63,7 +68,6 @@ void AGameManager::Tick(float DeltaTime)
 				}
 				else if(!PauseHUD->GetIsEnabled())
 				{
-					PauseHUD->SetRemainingTime(RemainingTime);	
 					PauseGame();
 				}
 				else if(PlayerControllerRef->WasInputKeyJustPressed(EKeys::P) )
@@ -107,6 +111,7 @@ void AGameManager::Tick(float DeltaTime)
 	
 }
 
+//Call SetGameStatus to set Current Game Status to Win and Display WinHUD
 void AGameManager::WinGame()
 {
 	PlayerControllerRef->SetShowMouseCursor(true);
@@ -119,6 +124,7 @@ void AGameManager::WinGame()
 	TimerStarted = false;
 }
 
+//Call SetGameStatus to set Current Game Status to Lose and Display LoseHUD
 void AGameManager::LoseGame()
 {
 	PlayerControllerRef->SetShowMouseCursor(true);
@@ -131,6 +137,7 @@ void AGameManager::LoseGame()
 	TimerStarted = false;
 }
 
+// Call SetGameStatus to set Current Game Status to Pause and Display PauseHUD
 void AGameManager::PauseGame()
 {
 	PlayerControllerRef->SetShowMouseCursor(true);
@@ -139,20 +146,24 @@ void AGameManager::PauseGame()
 	PauseHUD->SetVisibility(ESlateVisibility::Visible);
 	PauseHUD->SetIsEnabled(true);
 
-
+	PauseHUD->SetRemainingTime(RemainingTime);	
 }
+
+// CurGameStatus Set Function 
 void AGameManager::SetGameStatus(EGameStatus NewGameStatus)
 {
 	CurGameStatus = NewGameStatus;
 }
 
+// Call HandleDecreaseTime by GameplayHUD and Decrease RemainingTime
 void AGameManager::TimeManager()
 {
-	GameplayHUD->HandleDecreaseTime(TotalTime, RemainingTime);
 	RemainingTime -= 1;
+	GameplayHUD->HandleDecreaseTime(TotalTime, RemainingTime);
 	TimerStarted = false;
 }
 
+// LevelEnd Set Function 
 void AGameManager::SetLevelEnd(ULevelEnd* CurLevelEnd)
 {
 	LevelEnd = CurLevelEnd;
