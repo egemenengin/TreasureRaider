@@ -40,6 +40,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	
 	if(!ensure(PhysicHandle != nullptr))
 	{
+
 		return;
 	}
 	if(PhysicHandle->GetGrabbedComponent() != nullptr)
